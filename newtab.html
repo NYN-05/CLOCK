@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- 
+  Modern New Tab Page for Chrome Extension
+  Contains clock, search, weather and shortcuts
+-->
+<html lang="en">
+<head>
+    <!-- Basic meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background video element -->
+    <video autoplay muted loop id="background-video" poster="fallback.jpg">
+        <source src="background1.mp4" type="video/mp4">
+        <source src="background2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Clock display -->
+        <div id="clock"></div>
+
+        <!-- Google search form -->
+        <form id="search-form" action="https://www.google.com/search" method="GET">
+            <input type="text" id="search-box" name="q" placeholder="Search Google..." autocomplete="off">
+        </form>
+
+        <!-- Weather information display -->
+        <div id="weather">
+            <p id="weather-status">Fetching weather...</p>
+            <p class="attribution">Weather data by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+        </div>
+
+        <!-- Shortcuts section -->
+        <div id="shortcuts">
+            <div class="shortcut-container">
+                <a href="https://chatgpt.com" class="shortcut" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/ChatGPT-Logo.svg/250px-ChatGPT-Logo.svg.png" alt="ChatGPT">
+                    <span>ChatGPT</span>
+                </a>
+                <a href="https://www.youtube.com" class="shortcut" target="_blank">
+                    <img src="https://www.gstatic.com/youtube/img/branding/favicon/favicon_144x144_v2.png" alt="YouTube">
+                    <span>YouTube</span>
+                </a>
+                <a href="https://github.com" class="shortcut" target="_blank">
+                    <img src="https://github.githubassets.com/favicons/favicon.png" alt="GitHub">
+                    <span>GitHub</span>
+                </a>
+                <a href="https://mail.google.com" class="shortcut" target="_blank">
+                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail">
+                    <span>Gmail</span>
+                </a>
+            </div>
+        </div>
+        <button id="dark-mode-toggle" title="Toggle Dark Mode">☀️</button>
+    </div>
+    <script src="newtab.js"></script>
+</body>
+</html>

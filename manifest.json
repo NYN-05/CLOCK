@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Modern New Tab",
+  "version": "1.0",
+  "description": "A minimalistic and modern new tab with clock, weather, search, and shortcuts.",
+  "action": {
+    "default_popup": "newtab.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "geolocation",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://api.openweathermap.org/*"
+  ]
+}
